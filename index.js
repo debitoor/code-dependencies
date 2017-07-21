@@ -5,10 +5,13 @@ var builtin = process.binding('natives')
 var getDirname = require('path').dirname;
 
 function parse(src) {
-	var re = /require\((['"])(.*)\1\)/g;
+	var commentRegexp = /\/\*(.*?)\*\/|\/\/(.*?)(\n|$)/g;
+	var dependencyRegexp = /require\((['"])(.*)\1\)/g;
+
+	src = src.replace(commentRegexp, '');
 	var deps = [];
 	var match;
-	while ((match = re.exec(src))) {
+	while ((match = dependencyRegexp.exec(src))) {
 		deps.push(match[2]);
 	}
 	return deps;
