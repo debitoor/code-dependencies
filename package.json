@@ -4,7 +4,8 @@
   "description": "finding node code dependencies",
   "main": "index.js",
   "scripts": {
-    "test": "istanbul cover _mocha"
+    "test": "istanbul cover _mocha",
+    "coveralls": "coveralls < ./coverage/lcov.info || echo 'problem with reporting to coveralls'"
   },
   "repository": {
     "type": "git",
@@ -27,6 +28,7 @@
     "@debitoor/eslint-config-debitoor": "1.5.0",
     "@debitoor/mocha-strict-dependencies": "1.1.0",
     "chai": "4.1.0",
+    "coveralls": "2.13.1",
     "istanbul": "0.4.5",
     "mocha": "3.4.2",
     "mocha-eslint": "4.0.0"
