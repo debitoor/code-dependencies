@@ -25,6 +25,7 @@
   },
   "devDependencies": {
     "@debitoor/eslint-config-debitoor": "1.5.0",
+    "@debitoor/mocha-strict-dependencies": "1.1.0",
     "chai": "4.1.0",
     "istanbul": "0.4.5",
     "mocha": "3.4.2",
