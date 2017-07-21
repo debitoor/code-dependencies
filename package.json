@@ -21,7 +21,7 @@
   },
   "homepage": "https://github.com/debitoor/find-dependencies",
   "dependencies": {
-    "async": "^1.4.2"
+    "async": "2.5.0"
   },
   "devDependencies": {
     "@debitoor/eslint-config-debitoor": "1.5.0",
